@@ -1,5 +1,6 @@
 #include "engine.h"
 #include <iostream>
+#include "instance.h"
 
 Engine::Engine() {
 
@@ -8,6 +9,8 @@ Engine::Engine() {
     }
   
     build_glfw_window();
+    
+    make_instance();
 
 }
 
@@ -37,7 +40,10 @@ void Engine::build_glfw_window() {
      
      }
      
-      
+void Engine::make_instance() {
+
+    instance = vkInit::make_instance(debugMode, "Engine teste");
+}      
      
      Engine::~Engine() {
        
