@@ -1,10 +1,10 @@
 #pragma once
 
 //Há duas formas de "incluir" Vulkan - 
-#define GLFW_INCLUDE_VULKAN // essa é uma forma.
+//#define GLFW_INCLUDE_VULKAN  essa é uma forma.
 #include <GLFW/glfw3.h>
+#include "config.h"
 
-//#include <vulkan/vulkan.hpp> - essa é outra forma, escolha a que quiser, por enquanto.
 
 
 class Engine {
@@ -25,7 +25,15 @@ private:
     int height{ 600 };
     GLFWwindow* window{ nullptr };
     
+    //Vulkan instance
+    vk::Instance instance{ nullptr};
+    
+    
     //glfw setup
     void build_glfw_window();
+
+    //instance setup
+    void make_instance();
+
 
 };
