@@ -1,5 +1,11 @@
 #pragma once
+
+//Há duas formas de "incluir" Vulkan - 
+#define GLFW_INCLUDE_VULKAN // essa é uma forma.
 #include <GLFW/glfw3.h>
+
+//#include <vulkan/vulkan.hpp> - essa é outra forma, escolha a que quiser, por enquanto.
+
 
 class Engine {
 
