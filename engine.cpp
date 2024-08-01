@@ -23,7 +23,29 @@ void Engine::build_glfw_window() {
      
      //GLFWwindow* glfwCreateWindow (int width, int height, const char *title, GLFWmonitor *monitor, GLFWwindow *share)
  
-     if (window = glfwCreateWindow(width, height, "     
+     if (window = glfwCreateWindow(width, height, "Engine teste", nullptr, nullptr)) {
+        if (debugMode) {
+            std::cout << "Aqui está a window da engine, width" << width << ", height" << height << '\n';
+      }
+      else {
+              if (debugMode) {
+                      std::cout << "A criação da window falhou\n";
+              }
+         }
+      
+     } 
+     
+     Engine::~Engine() {
+       
+            if (debugMode) {
+                    std::cout << "Até mais!\n";
+            }
+       
+            //terminate glfw
+            glfwTerminate();
+       
+       
+     }    
      
      
 } 
