@@ -17,7 +17,7 @@ private:
     //parâmetros de janela
     int width{ 800 };
     int height{ 600 };
-    GLFWwindow* window{ nullprt };
+    GLFWwindow* window{ nullptr };
     
     //glfw setup
     void build_glfw_window();
